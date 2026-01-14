@@ -75,7 +75,7 @@ class CLIPFeatureExtractor:
         self.model = CLIPModel().to(self.device)
         self.model.eval()  
         
-        model_path = os.path.join('backend', 'clip_model_epoch_30.pt')
+                model_path = os.path.join('backend', 'models', 'clip_model_epoch_30.pt')
         
         try:
             with open(model_path, 'rb') as f:

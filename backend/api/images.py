@@ -1,19 +1,10 @@
 from fastapi import APIRouter, HTTPException, Query
 from fastapi.responses import JSONResponse
-from pydantic import BaseModel
-from image_db_util import ImageDBManager
-from image_search_util import ImageSearcher
+from ..models.schemas import ImageRequest, FolderRequest, ImageSearch
+from ..services.database_service import ImageDBManager
+from ..services.search_service import ImageSearcher
 
 router = APIRouter(prefix="/images", tags=["images"])
-
-class ImageRequest(BaseModel):
-    image_path: str
-
-class FolderRequest(BaseModel):
-    folder_path: str
-
-class ImageSearch(BaseModel):
-    query: str
 
 @router.post("/add")
 async def add_image(request: ImageRequest, user_id: str = Query(...)):

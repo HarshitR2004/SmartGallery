@@ -1,0 +1,11 @@
+torch
+torchvision
+transformers
+Pillow
+numpy
+fastapi
+uvicorn
+pydantic
+python-multipart
+scikit-learn
+chromadb

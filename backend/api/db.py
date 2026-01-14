@@ -1,14 +1,11 @@
 from fastapi import APIRouter, HTTPException
-from pydantic import BaseModel
-from image_db_util import ImageDBManager
+from ..models.schemas import InitializeDBRequest
+from ..services.database_service import ImageDBManager
 import uuid
 import logging
 
 logger = logging.getLogger(__name__)
 router = APIRouter(prefix="/db", tags=["database"])
-
-class InitializeDBRequest(BaseModel):
-    user_name: str
 
 @router.post("/initialize")
 async def initialize_db(request: InitializeDBRequest):
