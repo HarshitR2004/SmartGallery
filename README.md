@@ -46,39 +46,11 @@ This project uses a custom CLIP-style model with a ResNet50 and BERT architectur
 
 ### Quantitative Comparison
 
-| Model                     | Training Scale         | MRR     | MAP     | Notes                             |
-| ------------------------- | ---------------------- | ------- | ------- | --------------------------------- |
-| OpenAI CLIP (ViT-B/32)    | Web-scale (400M+ pairs)| ~0.6–0.7| ~0.g. a happy dog playing in a field'
-- `POST /images/search`: Search for an image with a text query.
-
-See `/docs` for detailed request/response models.
----
-
-## How It Works
-
-Smart Gallery uses a custom CLIP (Contrastive Language-Image Pre-Training) model to understand images and text. An Image Encoder (ViT) and a Text Encoder (BERT) convert images and text queries into vectors. The model finds the closest image vectors to your text query vector.
-
-### Technology Stack
-
-- **Backend:** FastAPI (Python)
-- **ML Framework:** PyTorch
-- **Transformers:** Hugging Face Transformers
-- **Vector Database:** ChromaDB
-- **Web Server:** Uvicorn
-
----
-
-## Model Performance
-
-This project uses a custom CLIP-style model with a Vision Transformer (ViT) and BERT architecture, trained on a domain-specific dataset. Unlike large-scale models, it is optimized for retrieval quality under limited compute.
-
-### Quantitative Comparison
-
-| Model                     | Training Scale         | MRR     | MAP     | Notes                             |
-| ------------------------- | ---------------------- | ------- | ------- | --------------------------------- |
-| OpenAI CLIP (ViT-B/32)    | Web-scale (400M+ pairs)| ~0.6–0.7| ~0.7–0.8| Strong zero-shot, general-purpose |
-| OpenCLIP (LAION)          | Web-scale              | ~0.7+   | ~0.8+   | Improved alignment via scale      |
-| **Custom ResNet50  + BERT (This Work)** | **Domain-specific**    | **0.3** | **0.9** | **Strong multi-relevant ranking**   |
+| Model                     | Training Scale         | MRR     | MAP     |
+| ------------------------- | ---------------------- | ------- | ------- |
+| OpenAI CLIP (ViT-B/32)    | Web-scale (400M+ pairs)| ~0.6–0.7| ~0.7–0.8|
+| OpenCLIP (LAION)          | Web-scale              | ~0.7+   | ~0.8+   |
+| **Custom ResNet50 + BERT**| **Domain-specific**    | **0.3** | **0.9** |
 
 ### Interpretation
 
