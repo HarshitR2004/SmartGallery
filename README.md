@@ -16,7 +16,20 @@ A self-hosted image gallery that lets you search your photos with natural langua
 
 ## How It Works
 
-Smart Gallery uses a custom CLIP (Contrastive Language-Image Pre-Training) model to map images and text to a shared embedding space. This is achieved through two main components: an image encoder and a text encoder.
+Smart Gallery uses a custom CLIP (Contrastive Language-Image Pre-Training) model to map images and text to a shared embedding space. The model was trained on the MSCOCO dataset. This is achieved through two main components: an image encoder and a text encoder.
+
+### Model Architecture
+
+```mermaid
+graph TD
+    A[Image] --> B(Image Encoder: ResNet50);
+    B --> C{Image Embedding};
+    D[Text] --> E(Text Encoder: BERT);
+    E --> F{Text Embedding};
+    C --> G((Shared Embedding Space));
+    F --> G;
+    G -- Cosine Similarity --> H(Search Results);
+```
 
 ### Image Encoder: ResNet50
 
