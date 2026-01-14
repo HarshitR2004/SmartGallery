@@ -1,29 +1,9 @@
 # Smart Gallery: AI-Powered Semantic Image Search
 
-![Smart Gallery Banner](https://user-images.githubusercontent.com/12345/12345678-abcdef.png) <!-- Replace with an actual banner image if available -->
 
 **Smart Gallery is an intelligent, self-hosted image gallery that allows you to search through your photo collection using natural language. Instead of relying on tags or filenames, you can find images based on their content, context, and meaning.**
 
----
 
-## 📚 Table of Contents
-- [✨ Features](#-features)
-- [🧠 How It Works: The Technology](#-how-it-works-the-technology)
-  - [The Machine Learning Model](#the-machine-learning-model)
-  - [Technology Stack](#technology-stack)
-- [📂 Project Structure](#-project-structure)
-- [🚀 Getting Started](#-getting-started)
-  - [Prerequisites](#prerequisites)
-  - [Installation & Setup](#installation--setup)
-- [💡 Usage](#-usage)
-  - [1. Initialize the Database](#1-initialize-the-database)
-  - [2. Add Images](#2-add-images)
-  - [3. Search for Images](#3-search-for-images)
-- [🔌 API Endpoints](#-api-endpoints)
-- [🤝 Contributing](#-contributing)
-- [📜 License](#-license)
-
----
 
 ## ✨ Features
 
@@ -179,20 +159,3 @@ curl -X POST "http://localhost:8080/images/search?user_id=YOUR_USER_ID" \
 
 For detailed request/response models, please see the auto-generated docs at `/docs`.
 
----
-
-## 🤝 Contributing
-
-Contributions are welcome! Please feel free to submit a pull request or open an issue for bugs, feature requests, or improvements.
-
-1. Fork the Project
-2. Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
-3. Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
-4. Push to the Branch (`git push origin feature/AmazingFeature`)
-5. Open a Pull Request
-
----
-
-## 📜 License
-
-This project is licensed under the MIT License. See the `LICENSE` file for details.
