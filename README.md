@@ -50,7 +50,7 @@ This project uses a custom CLIP-style model with a ResNet50 and BERT architectur
 | ------------------------- | ---------------------- | ------- | ------- |
 | OpenAI CLIP (ViT-B/32)    | Web-scale (400M+ pairs)| ~0.6–0.7| ~0.7–0.8|
 | OpenCLIP (LAION)          | Web-scale              | ~0.7+   | ~0.8+   |
-| **Custom ResNet50 + BERT**| **Domain-specific**    | **0.3** | **0.9** |
+| **Custom ResNet50 + BERT**| **MSCOCO Dataset**     | **0.3** | **0.9** |
 
 ### Interpretation
 
